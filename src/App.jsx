@@ -8,7 +8,7 @@ function App() {
   const [shoppingCart, setShoppingCart] = useState({
     items: [],
   });
-
+ 
   function handleAddItemToCart(id) {
     setShoppingCart((prevShoppingCart) => {
       const updatedItems = [...prevShoppingCart.items];
