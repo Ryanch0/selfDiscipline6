@@ -36,7 +36,6 @@ const shoppingCartReducer = (state, action) => {
         };
       
     } 
-
     if(action.type === 'UPDATE_ITEM') {
         const updatedItems = [...state.items];
         const updatedItemIndex = updatedItems.findIndex(
@@ -60,7 +59,6 @@ const shoppingCartReducer = (state, action) => {
             items: updatedItems,
         };
     }
-
     return state
 }
 
@@ -95,6 +93,7 @@ export default function CartContextProvider({ children }) {
     }
 
 
+    console.log(ctxValue.items)
     return <CartContext.Provider value={ctxValue}>
         {children}
     </CartContext.Provider>
